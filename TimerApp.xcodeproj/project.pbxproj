@@ -13,6 +13,7 @@
 		AC69737126E9EA51007985B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC69736F26E9EA51007985B2 /* Main.storyboard */; };
 		AC69737326E9EA54007985B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC69737226E9EA54007985B2 /* Assets.xcassets */; };
 		AC69737626E9EA54007985B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC69737426E9EA54007985B2 /* LaunchScreen.storyboard */; };
+		AC69737E26E9EB65007985B2 /* StartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC69737D26E9EB65007985B2 /* StartButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		AC69737226E9EA54007985B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC69737526E9EA54007985B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC69737726E9EA54007985B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC69737D26E9EB65007985B2 /* StartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				AC69736B26E9EA51007985B2 /* SceneDelegate.swift */,
 				AC69736D26E9EA51007985B2 /* ViewController.swift */,
 				AC69736F26E9EA51007985B2 /* Main.storyboard */,
+				AC69737D26E9EB65007985B2 /* StartButton.swift */,
 				AC69737226E9EA54007985B2 /* Assets.xcassets */,
 				AC69737426E9EA54007985B2 /* LaunchScreen.storyboard */,
 				AC69737726E9EA54007985B2 /* Info.plist */,
@@ -139,6 +142,7 @@
 			files = (
 				AC69736E26E9EA51007985B2 /* ViewController.swift in Sources */,
 				AC69736A26E9EA51007985B2 /* AppDelegate.swift in Sources */,
+				AC69737E26E9EB65007985B2 /* StartButton.swift in Sources */,
 				AC69736C26E9EA51007985B2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,7 +297,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.TimerApp;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.KalinduDahanayake.TimerApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -312,7 +316,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.TimerApp;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.KalinduDahanayake.TimerApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
