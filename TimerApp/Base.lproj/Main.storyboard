@@ -15,34 +15,180 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gDZ-58-nEC">
-                                <rect key="frame" x="0.0" y="474" width="414" height="422"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gDZ-58-nEC">
+                                <rect key="frame" x="0.0" y="474" width="390" height="370"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adE-du-xGC" customClass="StartButton" customModule="TimerApp" customModuleProvider="target">
-                                        <rect key="frame" x="117" y="64" width="180" height="180"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.72385314020000002" green="0.28276636049999998" blue="0.33735852529999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adE-du-xGC" customClass="CustomButton" customModule="TimerApp" customModuleProvider="target">
+                                        <rect key="frame" x="105" y="65" width="180" height="180"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="180" id="DXA-N0-pPN"/>
+                                        </constraints>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="START">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="StartStopPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sAJ-aI-zPV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n90-mN-uor" customClass="CustomButton" customModule="TimerApp" customModuleProvider="target">
+                                        <rect key="frame" x="293" y="215" width="30" height="30"/>
+                                        <state key="normal" title="+30">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="increaseTime:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ahy-3a-KHZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBU-p8-dJM" customClass="CustomButton" customModule="TimerApp" customModuleProvider="target">
+                                        <rect key="frame" x="293" y="115" width="30" height="30"/>
+                                        <state key="normal" title="+5">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="increaseTime:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yEd-3y-qQ4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UgO-rL-F6y" customClass="CustomButton" customModule="TimerApp" customModuleProvider="target">
+                                        <rect key="frame" x="293" y="165" width="30" height="30"/>
+                                        <state key="normal" title="+10">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="increaseTime:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tgi-25-zy6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNU-DZ-KE0" customClass="CustomButton" customModule="TimerApp" customModuleProvider="target">
+                                        <rect key="frame" x="293" y="65" width="30" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="+1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="increaseTime:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QvX-lv-ZwW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SwW-P2-csF" customClass="CustomButton" customModule="TimerApp" customModuleProvider="target">
+                                        <rect key="frame" x="67" y="115" width="30" height="30"/>
+                                        <state key="normal" title="-5">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="decreaseTime:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cLN-di-L8E"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnf-kB-ZEf" customClass="CustomButton" customModule="TimerApp" customModuleProvider="target">
+                                        <rect key="frame" x="67" y="65" width="30" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="-1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="decreaseTime:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bjf-6w-Z8U"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wie-fY-1Jx" customClass="CustomButton" customModule="TimerApp" customModuleProvider="target">
+                                        <rect key="frame" x="67" y="215" width="30" height="30"/>
+                                        <state key="normal" title="-30">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="decreaseTime:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VVe-lm-Cpn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="af6-rY-Y81">
+                                        <rect key="frame" x="175.66666666666666" y="253" width="39" height="30"/>
+                                        <state key="normal" title="Reset">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value=""/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="resetTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kcP-Pe-nWc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dtl-tJ-ikq" customClass="CustomButton" customModule="TimerApp" customModuleProvider="target">
+                                        <rect key="frame" x="67" y="165" width="30" height="30"/>
+                                        <state key="normal" title="-10">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="decreaseTime:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D9n-Je-zCk"/>
+                                        </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.72385314016631153" green="0.28276636045313058" blue="0.3373585253317174" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="adE-du-xGC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Wie-fY-1Jx" secondAttribute="trailing" constant="8" symbolic="YES" id="2vZ-tN-dK7"/>
+                                    <constraint firstItem="UgO-rL-F6y" firstAttribute="top" secondItem="XBU-p8-dJM" secondAttribute="bottom" constant="20" id="5yw-37-GZw"/>
+                                    <constraint firstItem="n90-mN-uor" firstAttribute="top" secondItem="UgO-rL-F6y" secondAttribute="bottom" constant="20" id="6YM-cp-9c1"/>
+                                    <constraint firstItem="SwW-P2-csF" firstAttribute="leading" secondItem="gDZ-58-nEC" secondAttribute="leading" constant="67" id="8U1-MI-imB"/>
+                                    <constraint firstItem="dtl-tJ-ikq" firstAttribute="leading" secondItem="gDZ-58-nEC" secondAttribute="leading" constant="67" id="8Vq-aX-dZa"/>
+                                    <constraint firstItem="cnf-kB-ZEf" firstAttribute="top" secondItem="gDZ-58-nEC" secondAttribute="top" constant="65" id="8ca-xW-ilU"/>
+                                    <constraint firstItem="af6-rY-Y81" firstAttribute="top" secondItem="adE-du-xGC" secondAttribute="bottom" constant="8" symbolic="YES" id="AL6-O3-wIi"/>
+                                    <constraint firstItem="adE-du-xGC" firstAttribute="top" secondItem="gDZ-58-nEC" secondAttribute="top" constant="65" id="Ady-rS-1ci"/>
+                                    <constraint firstItem="Wie-fY-1Jx" firstAttribute="leading" secondItem="gDZ-58-nEC" secondAttribute="leading" constant="67" id="CmG-Oo-tDa"/>
+                                    <constraint firstAttribute="trailing" secondItem="XBU-p8-dJM" secondAttribute="trailing" constant="67" id="ER4-zk-xyT"/>
+                                    <constraint firstAttribute="trailing" secondItem="adE-du-xGC" secondAttribute="trailing" constant="105" id="FG3-dK-2ce"/>
+                                    <constraint firstItem="UgO-rL-F6y" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="adE-du-xGC" secondAttribute="trailing" constant="8" symbolic="YES" id="FeG-Bq-Iwa"/>
+                                    <constraint firstItem="SwW-P2-csF" firstAttribute="top" secondItem="cnf-kB-ZEf" secondAttribute="bottom" constant="20" id="Gcb-iN-dXK"/>
+                                    <constraint firstAttribute="bottom" secondItem="Wie-fY-1Jx" secondAttribute="bottom" constant="125" id="Glr-zN-UXj"/>
+                                    <constraint firstItem="n90-mN-uor" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="adE-du-xGC" secondAttribute="trailing" constant="8" symbolic="YES" id="KxD-qE-XOb"/>
+                                    <constraint firstAttribute="trailing" secondItem="hNU-DZ-KE0" secondAttribute="trailing" constant="67" id="OQn-uh-WQU"/>
+                                    <constraint firstItem="adE-du-xGC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dtl-tJ-ikq" secondAttribute="trailing" constant="8" symbolic="YES" id="PqD-cw-fQY"/>
+                                    <constraint firstItem="hNU-DZ-KE0" firstAttribute="top" secondItem="gDZ-58-nEC" secondAttribute="top" constant="65" id="QWJ-sJ-4xC"/>
+                                    <constraint firstAttribute="trailing" secondItem="n90-mN-uor" secondAttribute="trailing" constant="67" id="Qje-HH-j6Z"/>
+                                    <constraint firstItem="adE-du-xGC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cnf-kB-ZEf" secondAttribute="trailing" constant="8" symbolic="YES" id="TfU-Na-FFT"/>
+                                    <constraint firstItem="n90-mN-uor" firstAttribute="top" secondItem="UgO-rL-F6y" secondAttribute="bottom" constant="20" id="URc-eh-Bdm"/>
+                                    <constraint firstItem="XBU-p8-dJM" firstAttribute="top" secondItem="hNU-DZ-KE0" secondAttribute="bottom" constant="20" id="ZL1-AA-P6c"/>
+                                    <constraint firstItem="hNU-DZ-KE0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="adE-du-xGC" secondAttribute="trailing" constant="8" symbolic="YES" id="aBS-OY-cST"/>
+                                    <constraint firstAttribute="bottom" secondItem="adE-du-xGC" secondAttribute="bottom" constant="125" id="aLy-68-ehR"/>
+                                    <constraint firstItem="XBU-p8-dJM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="adE-du-xGC" secondAttribute="trailing" constant="8" symbolic="YES" id="eZD-cL-hFv"/>
+                                    <constraint firstItem="af6-rY-Y81" firstAttribute="centerX" secondItem="adE-du-xGC" secondAttribute="centerX" id="gaL-u0-n2L"/>
+                                    <constraint firstItem="cnf-kB-ZEf" firstAttribute="leading" secondItem="gDZ-58-nEC" secondAttribute="leading" constant="67" id="h5y-96-Zhe"/>
+                                    <constraint firstItem="dtl-tJ-ikq" firstAttribute="top" secondItem="SwW-P2-csF" secondAttribute="bottom" constant="20" id="i7g-Tr-ouA"/>
+                                    <constraint firstItem="UgO-rL-F6y" firstAttribute="top" secondItem="XBU-p8-dJM" secondAttribute="bottom" constant="20" id="ijj-pg-3zl"/>
+                                    <constraint firstItem="XBU-p8-dJM" firstAttribute="top" secondItem="hNU-DZ-KE0" secondAttribute="bottom" constant="20" id="kn4-oT-VfI"/>
+                                    <constraint firstItem="Wie-fY-1Jx" firstAttribute="top" secondItem="dtl-tJ-ikq" secondAttribute="bottom" constant="20" id="uNX-Ij-1eg"/>
+                                    <constraint firstItem="adE-du-xGC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="SwW-P2-csF" secondAttribute="trailing" constant="8" symbolic="YES" id="vrg-Gb-r9p"/>
+                                    <constraint firstAttribute="trailing" secondItem="UgO-rL-F6y" secondAttribute="trailing" constant="67" id="xHd-wa-YhF"/>
+                                    <constraint firstItem="adE-du-xGC" firstAttribute="leading" secondItem="gDZ-58-nEC" secondAttribute="leading" constant="105" id="y97-k1-pfa"/>
+                                </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWT-1s-Bmb">
-                                <rect key="frame" x="16" y="153" width="358" height="169"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="137"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWT-1s-Bmb">
+                                <rect key="frame" x="16" y="144" width="358" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="rSD-3W-6Jw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="110"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.91980725526809692" green="0.35931397607916066" blue="0.42868477320601872" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="gDZ-58-nEC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Ejv-iR-Djh"/>
+                            <constraint firstItem="NWT-1s-Bmb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="TRN-H3-UXD"/>
+                            <constraint firstAttribute="bottom" secondItem="gDZ-58-nEC" secondAttribute="bottom" id="gh3-cd-ckF"/>
+                            <constraint firstItem="gDZ-58-nEC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="i4R-A2-jpX"/>
+                            <constraint firstItem="gDZ-58-nEC" firstAttribute="top" secondItem="NWT-1s-Bmb" secondAttribute="bottom" constant="200" id="jAA-s0-VaX"/>
+                            <constraint firstItem="NWT-1s-Bmb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="mbR-pl-H8b"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NWT-1s-Bmb" secondAttribute="trailing" constant="16" id="wr7-qO-rl6"/>
+                            <constraint firstItem="gDZ-58-nEC" firstAttribute="top" secondItem="NWT-1s-Bmb" secondAttribute="bottom" constant="200" id="z2c-to-hpP"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="View" destination="8bC-Xf-vdC" id="2PY-QS-Liq"/>
+                        <outlet property="timeLabel" destination="NWT-1s-Bmb" id="nwM-iM-yiT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
