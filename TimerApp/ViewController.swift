@@ -24,7 +24,6 @@ class ViewController: UIViewController {
         // Start
         if (stopped) {
             self.view.backgroundColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
-            startTime = currentTime
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(step), userInfo: nil, repeats: true)
             stopped = !stopped
         }
@@ -42,7 +41,9 @@ class ViewController: UIViewController {
             currentTime -= 1
         } else {
             timer.invalidate()
-            currentTime = 30
+            currentTime = startTime
+            self.view.backgroundColor = #colorLiteral(red: 0.9952777028, green: 0.3051763177, blue: 0.4160037041, alpha: 1)
+            stopped = true
         }
         
         timeLabel.text = secondsToHoursMinutesSeconds(seconds: currentTime)
@@ -59,6 +60,8 @@ class ViewController: UIViewController {
     @IBAction func resetTimer(_ sender: Any) {
         timer.invalidate()
         timeLabel.text = secondsToHoursMinutesSeconds(seconds: startTime)
+        self.view.backgroundColor = #colorLiteral(red: 0.9952777028, green: 0.3051763177, blue: 0.4160037041, alpha: 1)
+        stopped = !stopped
     }
     
     @IBAction func increaseTime(_ sender: UIButton) {
@@ -74,6 +77,7 @@ class ViewController: UIViewController {
             default:
                 currentTime += 0
         }
+        startTime = currentTime
         timeLabel.text = secondsToHoursMinutesSeconds(seconds: currentTime)
         
     }
@@ -95,7 +99,7 @@ class ViewController: UIViewController {
         if (currentTime < 0) {
             currentTime = 0
         }
-        
+        startTime = currentTime
         timeLabel.text = secondsToHoursMinutesSeconds(seconds: currentTime)
     }
 }
