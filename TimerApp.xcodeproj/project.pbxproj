@@ -14,6 +14,7 @@
 		AC69737326E9EA54007985B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC69737226E9EA54007985B2 /* Assets.xcassets */; };
 		AC69737626E9EA54007985B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC69737426E9EA54007985B2 /* LaunchScreen.storyboard */; };
 		AC69738026EA33E0007985B2 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC69737F26EA33E0007985B2 /* CustomButton.swift */; };
+		ACC920B826FC901900D99B08 /* timerSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC920B726FC901900D99B08 /* timerSave.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		AC69737526E9EA54007985B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC69737726E9EA54007985B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC69737F26EA33E0007985B2 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		ACC920B726FC901900D99B08 /* timerSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timerSave.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				AC69736F26E9EA51007985B2 /* Main.storyboard */,
 				AC69737226E9EA54007985B2 /* Assets.xcassets */,
 				AC69737426E9EA54007985B2 /* LaunchScreen.storyboard */,
+				ACC920B726FC901900D99B08 /* timerSave.swift */,
 				AC69737726E9EA54007985B2 /* Info.plist */,
 				AC69737F26EA33E0007985B2 /* CustomButton.swift */,
 			);
@@ -144,6 +147,7 @@
 				AC69736A26E9EA51007985B2 /* AppDelegate.swift in Sources */,
 				AC69736C26E9EA51007985B2 /* SceneDelegate.swift in Sources */,
 				AC69738026EA33E0007985B2 /* CustomButton.swift in Sources */,
+				ACC920B826FC901900D99B08 /* timerSave.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

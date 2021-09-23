@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var timeLabel: UILabel!	
+    @IBOutlet var timeButtonCollection: [CustomButton]!
     var timer:Timer = Timer()
     var currentTime: Int = 0
     var startTime: Int = 0
@@ -16,7 +17,7 @@ class ViewController: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        timeLabel.text = secondsToHoursMinutesSeconds(seconds: currentTime)
+        timeLabel.text = secondsToMinutesSeconds(seconds: currentTime)
         // Do any additional setup after loading the view.
     }
     
@@ -34,34 +35,17 @@ class ViewController: UIViewController {
             stopped = !stopped
             timer.invalidate()
         }
-    }
-    
-    @objc func step() {
-        if currentTime > 0 {
-            currentTime -= 1
-        } else {
-            timer.invalidate()
-            currentTime = startTime
-            self.view.backgroundColor = #colorLiteral(red: 0.9952777028, green: 0.3051763177, blue: 0.4160037041, alpha: 1)
-            stopped = true
-        }
         
-        timeLabel.text = secondsToHoursMinutesSeconds(seconds: currentTime)
-    }
-    
-    func secondsToHoursMinutesSeconds(seconds: Int) -> (String) {
-        var timeString = ""
-        timeString += String(format: "%02d", (seconds % 3600) / 60)
-        timeString += " : "
-        timeString += String(format: "%02d", (seconds % 3600) % 60)
-        return timeString
+        disableButtons()
     }
     
     @IBAction func resetTimer(_ sender: Any) {
         timer.invalidate()
-        timeLabel.text = secondsToHoursMinutesSeconds(seconds: startTime)
+        timeLabel.text = secondsToMinutesSeconds(seconds: startTime)
         self.view.backgroundColor = #colorLiteral(red: 0.9952777028, green: 0.3051763177, blue: 0.4160037041, alpha: 1)
         stopped = !stopped
+        
+        disableButtons()
     }
     
     @IBAction func increaseTime(_ sender: UIButton) {
@@ -78,7 +62,7 @@ class ViewController: UIViewController {
                 currentTime += 0
         }
         startTime = currentTime
-        timeLabel.text = secondsToHoursMinutesSeconds(seconds: currentTime)
+        timeLabel.text = secondsToMinutesSeconds(seconds: currentTime)
         
     }
     
@@ -100,9 +84,34 @@ class ViewController: UIViewController {
             currentTime = 0
         }
         startTime = currentTime
-        timeLabel.text = secondsToHoursMinutesSeconds(seconds: currentTime)
+        timeLabel.text = secondsToMinutesSeconds(seconds: currentTime)
     }
     
+    @objc func step() {
+        if currentTime > 0 {
+            currentTime -= 1
+        } else {
+            timer.invalidate()
+            currentTime = startTime
+            self.view.backgroundColor = #colorLiteral(red: 0.9952777028, green: 0.3051763177, blue: 0.4160037041, alpha: 1)
+            stopped = true
+        }
+        
+        timeLabel.text = secondsToMinutesSeconds(seconds: currentTime)
+    }
     
+    func secondsToMinutesSeconds(seconds: Int) -> (String) {
+        var timeString = ""
+        timeString += String(format: "%02d", (seconds % 3600) / 60)
+        timeString += " : "
+        timeString += String(format: "%02d", (seconds % 3600) % 60)
+        return timeString
+    }
+    
+    func disableButtons() {
+        for button in timeButtonCollection {
+            button.isEnabled = !button.isEnabled
+        }
+    }
 }
 

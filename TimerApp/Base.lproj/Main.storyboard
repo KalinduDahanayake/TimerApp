@@ -192,6 +192,12 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oIT-65-EXG">
+                                <rect key="frame" x="349" y="44" width="25" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="folder.badge.plus" catalog="system"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.91980725526809692" green="0.35931397607916066" blue="0.42868477320601872" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -209,6 +215,14 @@
                     <connections>
                         <outlet property="View" destination="8bC-Xf-vdC" id="2PY-QS-Liq"/>
                         <outlet property="timeLabel" destination="NWT-1s-Bmb" id="nwM-iM-yiT"/>
+                        <outletCollection property="timeButtonCollection" destination="XBU-p8-dJM" collectionClass="NSMutableArray" id="aAT-Cc-edq"/>
+                        <outletCollection property="timeButtonCollection" destination="UgO-rL-F6y" collectionClass="NSMutableArray" id="at3-Dg-8XZ"/>
+                        <outletCollection property="timeButtonCollection" destination="n90-mN-uor" collectionClass="NSMutableArray" id="IXR-Be-G0V"/>
+                        <outletCollection property="timeButtonCollection" destination="cnf-kB-ZEf" collectionClass="NSMutableArray" id="AvY-TQ-iaH"/>
+                        <outletCollection property="timeButtonCollection" destination="SwW-P2-csF" collectionClass="NSMutableArray" id="XdZ-OM-6XE"/>
+                        <outletCollection property="timeButtonCollection" destination="dtl-tJ-ikq" collectionClass="NSMutableArray" id="fBm-gE-cWn"/>
+                        <outletCollection property="timeButtonCollection" destination="Wie-fY-1Jx" collectionClass="NSMutableArray" id="8Sp-IT-Zhx"/>
+                        <outletCollection property="timeButtonCollection" destination="hNU-DZ-KE0" collectionClass="NSMutableArray" id="1cv-fN-Qdr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -219,5 +233,6 @@
     <resources>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
+        <image name="folder.badge.plus" catalog="system" width="128" height="91"/>
     </resources>
 </document>
