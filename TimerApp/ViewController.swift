@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!	
     var timer:Timer = Timer()
     var currentTime: Int = 0
     var startTime: Int = 0
@@ -102,5 +102,7 @@ class ViewController: UIViewController {
         startTime = currentTime
         timeLabel.text = secondsToHoursMinutesSeconds(seconds: currentTime)
     }
+    
+    
 }
 
