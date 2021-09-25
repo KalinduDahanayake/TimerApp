@@ -35,8 +35,6 @@ class ViewController: UIViewController {
             stopped = !stopped
             timer.invalidate()
         }
-        
-        disableButtons()
     }
     
     @IBAction func resetTimer(_ sender: Any) {
@@ -44,8 +42,6 @@ class ViewController: UIViewController {
         timeLabel.text = secondsToMinutesSeconds(seconds: startTime)
         self.view.backgroundColor = #colorLiteral(red: 0.9952777028, green: 0.3051763177, blue: 0.4160037041, alpha: 1)
         stopped = !stopped
-        
-        disableButtons()
     }
     
     @IBAction func increaseTime(_ sender: UIButton) {
@@ -97,6 +93,7 @@ class ViewController: UIViewController {
             stopped = true
         }
         
+        disableButtons()
         timeLabel.text = secondsToMinutesSeconds(seconds: currentTime)
     }
     
